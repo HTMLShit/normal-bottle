@@ -1,0 +1,11 @@
+.lyrics p:first-child {
+    margin-top: 0;
+}
+
+.lyrics p:last-child {
+    margin-bottom: 0;
+}
+
+.lyrics span {
+    display: block;
+}
