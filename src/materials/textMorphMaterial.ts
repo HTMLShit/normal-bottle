@@ -4,11 +4,11 @@ import fragmentShader from '../shaders/fragment.glsl';
 
 export const textMorphMaterial = new THREE.ShaderMaterial({
     uniforms: {
-        resolution: { type: 'v2', value: null },
-        bottleSize: { type: 'f', value: 0 },
-        bottleShift: { type: 'v2', value: 0 },
-        text: { type: 't', value: null },
-        normals: { type: 't', value: null },
+        resolution: { value: null },
+        background: { value: null },
+        normalsSize: { value: 0 },
+        normalsShift: { value: null },
+        normals: { value: null },
     },
     vertexShader,
     fragmentShader,
