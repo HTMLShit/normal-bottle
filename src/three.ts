@@ -6,7 +6,7 @@ import { textMorphMaterial } from './materials/textMorphMaterial.ts';
 const width = window.innerWidth;
 const height = window.innerHeight;
 const pixelRatio = window.devicePixelRatio;
-const fontSize = 32;
+const fontSize = 24;
 const lineHeight = 1.5;
 
 function renderTextToCanvas(text = '', width = 512, height = 512, y = 0) {
@@ -18,10 +18,15 @@ function renderTextToCanvas(text = '', width = 512, height = 512, y = 0) {
 
     ctx.canvas.width = width;
     ctx.canvas.height = height;
-    ctx.font = `${fontSize * pixelRatio}px sans-serif`;
+    ctx.font = `${fontSize * pixelRatio}px Georgia`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = 'black';
+
+    if ('letterSpacing' in ctx) {
+        ctx.letterSpacing = `${0.5 * pixelRatio}px`;
+    }
+
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
     const lh = fontSize * pixelRatio * lineHeight;
@@ -34,8 +39,8 @@ function renderTextToCanvas(text = '', width = 512, height = 512, y = 0) {
     return ctx.canvas;
 }
 
-const bottleTexture = new THREE.TextureLoader().load('milk.png');
-const normals = new THREE.TextureLoader().load('milk_normal_border.png');
+const bottleTexture = new THREE.TextureLoader().load('milk_1024.png');
+const normals = new THREE.TextureLoader().load('milk_normal_border_1024.png');
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 const scene = new THREE.Scene();
