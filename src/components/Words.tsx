@@ -1,4 +1,4 @@
-import { useThree } from '@react-three/fiber';
+// import { useThree } from '@react-three/fiber';
 import { Text } from '@react-three/drei';
 
 export const LYRICS = `
@@ -72,8 +72,8 @@ Sending out an S.O.S
 `;
 
 export function Words() {
-    const state = useThree();
-    const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
+    // const state = useThree();
+    // const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
     const shared = {
         color: 'white',
         size: 0.1,

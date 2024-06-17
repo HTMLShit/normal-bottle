@@ -1,6 +1,8 @@
 import './Lyrics.css';
 import { forwardRef, useRef } from 'react';
-import { LyricsScene } from './LyricsScene.tsx';
+// import { LyricsScene } from './LyricsScene.tsx';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore yes
 import { WebGLText } from '@14islands/r3f-scroll-rig/powerups';
 import { ScrollScene, UseCanvas, useScrollRig } from '@14islands/r3f-scroll-rig';
 
@@ -12,10 +14,12 @@ function WebGLArticle({ children, className, ...props }: any) {
 
     return (
         <>
+            {/* @ts-expect-error I know */}
             <article ref={el}>{children}</article>
 
             {hasSmoothScrollbar && (
                 <UseCanvas debug={false}>
+                    {/* @ts-expect-error I know */}
                     <ScrollScene track={el}>
                         {(props) => (
                             <WebGLText
