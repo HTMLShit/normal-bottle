@@ -8,6 +8,7 @@ import { ScrollScene, UseCanvas, useScrollRig } from '@14islands/r3f-scroll-rig'
 
 type LyricsProps = React.HTMLProps<HTMLElement>;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function WebGLArticle({ children, className, ...props }: any) {
     const el = useRef();
     const { hasSmoothScrollbar } = useScrollRig();
