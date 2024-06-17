@@ -68,6 +68,7 @@ function init() {
         color: new THREE.Color(0x006a69),
     });
     const planeBottle = new THREE.Mesh(bottleGeometry, bottleMaterial);
+
     scene.add(camera);
     scene.add(planeText);
     scene.add(planeBottle);
